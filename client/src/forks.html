@@ -1,0 +1,13 @@
+<template>
+  <ul>
+    <li repeat.for="fork of forks">
+      ${fork.name}
+      <ul>
+        <li repeat.for="version of fork.versions">
+          ${version}
+          <button click.delegate="choose(fork.name, version)">Use</button>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</template>
